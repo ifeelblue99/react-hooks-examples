@@ -1,8 +1,13 @@
 import React, { useContext } from 'react';
+import { ColorContext } from '../App';
 
-function UseContext() {
+export default function UseContext() {
   const shape = useContext(ColorContext);
-  return <div className="square"></div>;
+  return (
+    <div
+      onClick={shape[2]}
+      style={{ backgroundColor: shape[0], borderRadius: shape[1] }}
+      className="square"
+    ></div>
+  );
 }
-
-export default UseContext;

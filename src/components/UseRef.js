@@ -10,5 +10,9 @@ export default function UseRef() {
       : (boxRef.current.style.backgroundColor = 'green');
   }
 
-  return <div onClick={changeColor} ref={boxRef} className="box"></div>;
+  return (
+    <div onClick={changeColor} ref={boxRef} className="box">
+      Click
+    </div>
+  );
 }
